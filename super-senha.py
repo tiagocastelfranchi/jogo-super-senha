@@ -11,13 +11,20 @@ vermelho = []
 laranja = []
 
 # randomização da senha
-print("As cores válidas são: AMARELO, VERDE, AZUL, ROXO, VERMELHO, LARANJA")
+print("\nPara se tornar o mestre do Super Senha, você precisa acertar a ordem das cores geradas automaticamente.")
+print("\nAs cores válidas são: AMARELO, VERDE, AZUL, ROXO, VERMELHO, LARANJA")
+print("\nVocê consegue descobrir a ordem das 4 cores escolhidas?")
+print("\n***ATENÇÃO***")
+print(
+    "\n- As cores não podem ser duplicadas \n- Você possuí 10 chutes para resolver o código\n- As respostas ao seu palpite serão [VAZIO] = a cor não está dentre as sorteadas, [PRETA] = a cor está correta, porém na posição errada e [BRANCA] = a cor está correta na posição correta")
+print("- Aqui está um exemplo de como você deve realizar os chutes. 'Digite seu palpite separando as cores por vírgula: azul, vermelho, laranja, verde'.")
 cores_senha = ['AMARELO', 'VERDE', 'AZUL', 'ROXO', 'VERMELHO', 'LARANJA']
 senha = random.sample(cores_senha, 4)
 
 # escolher o modo: ver senha ou não
-# print(f'A senha gerada foi: {senha}')
-print('Sua senha foi gerada! Boa sorte!')
+print('\n*Sua senha foi gerada! Boa sorte!*')
+print(f'\n~Senha gerada: {senha}')
+
 flag = True
 verdoufals = True
 
@@ -122,3 +129,23 @@ while flag:
                 break
             print(
                 '\n---------------------------------------------------------------------')
+
+while True:
+    denovo = input(
+        "\nVocê gostaria de jogar novamente? [s/n]: ").lower()
+    if denovo == 's':
+        print(
+            "\n------------------------------Novo Jogo------------------------------")
+        break
+    elif denovo == 'n':
+        print(
+            '\n---------------------------------------------------------------------')
+        print("\n***Obrigado por jogar Super Senha! Até mais!***")
+        print("\nJogo finalizado.\n")
+        exit()
+    else:
+        print('\nInput inválido.')
+        continue
+
+print(
+    '\n\n---------------------------------------------------------------------')
